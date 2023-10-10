@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #1C2833;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    background-color: #171717;
+    color: #fff;
+    padding: 2rem;
+    width: 40%;  /*Line 18 and 19 puts everything in the centre */
+    margin: 4rem auto;
+    border-radius: 10px;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background: #1e1e1e;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #fff
+}
+
+.weather-search {
+    position: relative;
+}
+
+.weather-search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather-units {
+    font-size: 1.5rem;
+}
+
+.weather-units span {
+    cursor: pointer;
+}
+
+.weather-units span:first-child {
+    margin-right: 0.5rem;
+}
+
+.weather-body {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.weather-datatime {
+    margin-bottom: 2rem;
+    font-size: 14px;
+}
+
+.weather-forecast {
+    background: #1e1e1e;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather-icon img {
+    width: 100px;
+}
+
+.weather-temperature {
+    font-size: 1.75rem;
+}
+
+.weather-minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+.weather-card {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.weather-card i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.weather-card p {
+    font-size: 14px;
+}
+
+@media(max-width: 936px){
+    .container {
+        width: 90%;
+    }
+
+    .weather-header {
+        flex-direction: column;
+    }
+
+    .weather-units {
+        margin-top: 1rem;
+    }
+}
+
+
+@media(max-width: 400px){
+    .weather-info {
+        grid-template-columns: none;
+    }
+}
